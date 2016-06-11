@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Notification pulldown layout" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="pekaka_memCleanView"
+        android:summaryOff="Memory clean button is hidden"
+        android:summaryOn="Memory clean button is shown"
+        android:title="Memory cleaner" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="tweaks_qs_pulldown"
+        android:summaryOff="Feature is disabled"
+        android:summaryOn="Feature is enabled"
+        android:title="Single swipe for Quickpanel" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#ff0b74d9"
+        android:dialogTitle="Customer color"
+        android:key="db_inkeffect_pekaka_memkiller_picker"
+        android:title="Memory cleaner Color" />
+    <PreferenceCategory android:title="RAM content display" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="ram_toggle"
+        android:summaryOff="Ram text is hidden"
+        android:summaryOn="Ram text is currently shown"
+        android:title="Ram text toggle" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#ff325d84"
+        android:dialogTitle="Ram display color"
+        android:key="memo_ram_text_color"
+        android:title="Ram display color" />
+    <PreferenceCategory android:title="Ongoing Notifications Removable" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="ongoing_notifications"
+        android:summaryOff="Ongoing Notifications are permanent"
+        android:summaryOn="Ongoing Notifications are removeable"
+        android:title="Make Ongoing Notifications Removable" />
+    <PreferenceCategory android:title="QuickLauncher On Recent Settings" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="quick_launch_show_add"
+        android:summaryOff="Add app button is hidden"
+        android:summaryOn="Add app button is shown"
+        android:title="QuickLauncher add app button" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="quick_launch_show_devider"
+        android:summaryOff="Divider is hidden"
+        android:summaryOn="Divider is shown"
+        android:title="QuickLauncher divider" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="quick_launch_text_visible"
+        android:summaryOff="Text is hidden"
+        android:summaryOn="Text is shown"
+        android:title="QuickLauncher text" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#ff325d84"
+        android:key="quick_launch_text_color"
+        android:summary="Choose color"
+        android:title="QuickLaunch text Color" />
+    <com.wubydax.romcontrol.prefs.MyListPreference
+        android:defaultValue="5"
+        android:entries="@array/StatusAppListColumnName"
+        android:entryValues="@array/StatusAppListColumnValue"
+        android:key="quick_launch_vis_buttons"
+        android:title="Number of Quickbuttons shown" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#00000000"
+        android:key="quick_launch_background_color"
+        android:summary="Choose color"
+        android:title="QuickLaunch background color" />
+    <PreferenceCategory android:title="Notification Panel Colors" />
+    <SwitchPreference
+        android:key="link_colors"
+        android:summaryOff="disabled"
+        android:summaryOn="enabled"
+        android:title="Enable to apply custom colors" />
+    <PreferenceCategory android:title="Statusbar Header Panel Colors" />
+    <SwitchPreference
+        android:key="hide_header_stock_clock"
+        android:summaryOff="Hide"
+        android:summaryOn="Show"
+        android:title="Stock clock" />
+    <SwitchPreference
+        android:key="hide_header_mod_clock"
+        android:summaryOff="Hide"
+        android:summaryOn="Show"
+        android:title="Mod clock" />
+    <SwitchPreference
+        android:dependency="hide_header_mod_clock"
+        android:key="hide_header_mod_clock_second"
+        android:summaryOff="Hide"
+        android:summaryOn="Show"
+        android:title="Mod clock second" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#ffe9eaec"
+        android:dependency="link_colors"
+        android:key="expanded_header_bg_color"
+        android:summary="Set custom color"
+        android:title="Expanded header bg color" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#ff325d84"
+        android:dependency="hide_header_mod_clock"
+        android:key="header_mod_clock_hours_color"
+        android:summary="Set text color"
+        android:title="Mod clock hours color" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#ff325d84"
+        android:dependency="hide_header_mod_clock"
+        android:key="header_mod_clock_minutes_color"
+        android:summary="Set text color"
+        android:title="Mod clock minute color" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#ff325d84"
+        android:dependency="hide_header_mod_clock"
+        android:key="header_mod_clock_seconds_color"
+        android:summary="Set text color"
+        android:title="Mod clock second color" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#ff325d84"
+        android:dependency="hide_header_mod_clock"
+        android:key="date_header_color"
+        android:summary="Set text color"
+        android:title="Mod date color" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#ff325d84"
+        android:dependency="link_colors"
+        android:key="expand_header_icon_color"
+        android:summary="Set custom color"
+        android:title="Expanded header setting icon color" />
+    <PreferenceCategory android:title="Quick Toggles Panel Colors/Custom Icons" />
+    <com.wubydax.romcontrol.prefs.MyListPreference
+        android:entries="@array/toggle_entries"
+        android:entryValues="@array/toggle_values"
+        android:key="QSPanel_NumberCount"
+        android:summary="Number of toggles shown"
+        android:title="Visible Toggles Shown" />
+    <com.wubydax.romcontrol.prefs.MyListPreference
+        android:entries="@array/toggle_buttons_background_entries"
+        android:entryValues="@array/toggle_buttons_background_values"
+        android:key="toggle_buttons_background"
+        android:summary="Stock/Custom Quick toggle circle background"
+        android:title="Toggle buttons background" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#ffe9eaec"
+        android:dependency="link_colors"
+        android:key="quick_settings_panel_bg_color"
+        android:summary="Set custom color"
+        android:title="Quick toggles panel bg color" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#ffffffff"
+        android:key="toggle_buttons_background_color"
+        android:summary="Choose the color of stock quick toggles circle background"
+        android:title="Toggle Circle Color" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#ff325d84"
+        android:key="toggle_icon_on_color"
+        android:summary="Set toggle On color"
+        android:title="Quick Toggle On Color" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#ffe9eaec"
+        android:key="toggle_icon_off_color"
+        android:summary="Set toggle Off color"
+        android:title="Quick Toggle Off Color" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#ff325d84"
+        android:key="toggle_text_color"
+        android:summary="Set text color"
+        android:title="Quick Toggle Text Color" />
+    <PreferenceCategory android:title="Brightness Panel Colors" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#ffe9eaec"
+        android:dependency="link_colors"
+        android:key="brightness_background_color"
+        android:title="Brightness background color" />
+    <PreferenceCategory android:title="Data Usage Panel Colors" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#ffe9eaec"
+        android:dependency="link_colors"
+        android:key="data_usage_view_bg_color"
+        android:summary="Set custom color"
+        android:title="Data usage view bg color" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#ff325d84"
+        android:dependency="link_colors"
+        android:key="data_usage_color"
+        android:summary="Set text color"
+        android:title="Data usage text color" />
+    <PreferenceCategory android:title="Quick Connect Panel Bg. Colors" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#ffe9eaec"
+        android:dependency="link_colors"
+        android:key="quick_connect_bg_color"
+        android:summary="Set custom color"
+        android:title="Quick connect bg color" />
+    <PreferenceCategory android:title="Notification PopUp Panel Colors" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#ffe9eaec"
+        android:key="notification_background_color"
+        android:summary="Set custom color"
+        android:title="Notification Panel background color" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="\#ff325d84"
+        android:key="pulldown_text"
+        android:summary="Set text color"
+        android:title="Notification text color" />
+    <PreferenceCategory android:title="Heads Up Notification" />
+    <SwitchPreference
+        android:defaultValue="1"
+        android:key="heads_up_notifications_enabled"
+        android:summaryOff="Heads Up notification disabled"
+        android:summaryOn="Heads Up notification enabled"
+        android:title="Heads Up Notifications" />
+</PreferenceScreen>

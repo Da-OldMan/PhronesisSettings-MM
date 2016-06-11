@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:summary="Swiping left or right of screen with palm"
+        android:title="Screen palm swiping">
+        <PreferenceScreen
+            android:key="aurora_sweep_action"
+            android:title="Swipe right or left actions">
+            <com.wubydax.romcontrol.prefs.MyListPreference
+                android:entries="@array/sweep_keyguard_action"
+                android:entryValues="@array/sweep_keyguard_values"
+                android:key="aurora_sweep_right_keyguard"
+                android:title="Swiping left on lockscreen" />
+            <com.wubydax.romcontrol.prefs.MyListPreference
+                android:entries="@array/sweep_keyguard_action"
+                android:entryValues="@array/sweep_keyguard_values"
+                android:key="aurora_sweep_left_keyguard"
+                android:title="Swiping right on lockscreen" />
+            <com.wubydax.romcontrol.prefs.MyListPreference
+                android:entries="@array/sweep_action"
+                android:entryValues="@array/sweep_values"
+                android:key="aurora_sweep_right"
+                android:title="Swipe left action" />
+            <com.wubydax.romcontrol.prefs.IntentDialogPreference
+                includeSearch="true"
+                setSeparatorString=";"
+                android:key="aurora_sweep_right_define"
+                android:summary="None"
+                android:title="SwipeLeft Custom App" />
+            <com.wubydax.romcontrol.prefs.MyListPreference
+                android:entries="@array/sweep_action"
+                android:entryValues="@array/sweep_values"
+                android:key="aurora_sweep_left"
+                android:title="Swipe right action" />
+            <com.wubydax.romcontrol.prefs.IntentDialogPreference
+                includeSearch="true"
+                setSeparatorString=";"
+                android:key="aurora_sweep_left_define"
+                android:summary="None"
+                android:title="SwipeRight Custom App" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:summary=""
+        android:title="Device softkey Customization">
+        <PreferenceScreen
+            android:summary="Map softkey buttons to your preference"
+            android:title="Customize Soft Buttons">
+            <PreferenceCategory android:title="Customize Button Behaviors" />
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="disable_haptic"
+                android:summaryOff="Extra haptic enabled"
+                android:summaryOn="Extra haptic disabled"
+                android:title="Haptic Feedback" />
+            <PreferenceScreen
+                android:summary="Choose button behaviors"
+                android:title="Home Button">
+                <PreferenceCategory android:title="Home Button" />
+                <SwitchPreference
+                    android:defaultValue="true"
+                    android:key="homewake_toggle"
+                    android:summaryOff="Home button now disabled"
+                    android:summaryOn="Home button will wake phone"
+                    android:title="Enable Home Wake" />
+                <PreferenceCategory android:title="DoubleTap" />
+                <com.wubydax.romcontrol.prefs.MyListPreference
+                    android:entries="@array/key_longpress_actions"
+                    android:entryValues="@array/key_longpress_action_values"
+                    android:key="aurora_double_press_home"
+                    android:title="DoubleTap Assignment" />
+                <com.wubydax.romcontrol.prefs.IntentDialogPreference
+                    includeSearch="true"
+                    setSeparatorString=";"
+                    android:key="aurora_double_press_home_define"
+                    android:summary="None"
+                    android:title="DoubleTap custom App" />
+                <PreferenceCategory android:title="LongPress Assignment" />
+                <com.wubydax.romcontrol.prefs.MyListPreference
+                    android:entries="@array/key_longpress_actions"
+                    android:entryValues="@array/key_longpress_action_values"
+                    android:key="aurora_long_press_home"
+                    android:title="LongPress Assignment" />
+                <com.wubydax.romcontrol.prefs.IntentDialogPreference
+                    includeSearch="true"
+                    setSeparatorString=";"
+                    android:key="aurora_long_press_home_define"
+                    android:summary="None"
+                    android:title="LongPress custom App" />
+            </PreferenceScreen>
+            <PreferenceScreen
+                android:summary="Choose button behaviors"
+                android:title="Left Capacitive Key">
+                <PreferenceCategory android:title="Left Capacitive Key" />
+                <com.wubydax.romcontrol.prefs.MyListPreference
+                    android:defaultValue="888"
+                    android:entries="@array/key_longpress_actions_nohome"
+                    android:entryValues="@array/key_longpress_action_values_nohome"
+                    android:key="aurora_long_press_menu"
+                    android:title="LongPress Assignment" />
+                <com.wubydax.romcontrol.prefs.IntentDialogPreference
+                    includeSearch="true"
+                    setSeparatorString=";"
+                    android:key="aurora_long_press_menu_define"
+                    android:summary="None"
+                    android:title="LongPress custom App" />
+            </PreferenceScreen>
+            <PreferenceScreen
+                android:summary="Choose button behaviors"
+                android:title="Right Capacitive Key">
+                <PreferenceCategory android:title="Right Capacitive Key" />
+                <com.wubydax.romcontrol.prefs.MyListPreference
+                    android:defaultValue="9"
+                    android:entries="@array/key_longpress_actions_nohome"
+                    android:entryValues="@array/key_longpress_action_values_nohome"
+                    android:key="aurora_long_press_back"
+                    android:title="Longpress Assignment" />
+                <com.wubydax.romcontrol.prefs.IntentDialogPreference
+                    includeSearch="true"
+                    setSeparatorString=";"
+                    android:key="aurora_long_press_back_define"
+                    android:summary="None"
+                    android:title="LongPress custom App" />
+            </PreferenceScreen>
+            <PreferenceScreen
+                android:summary="Choose button behaviors"
+                android:title="Power Button">
+                <PreferenceCategory android:title="Power Button" />
+                <com.wubydax.romcontrol.prefs.MyListPreference
+                    android:defaultValue="0"
+                    android:dependency="power_doubletap_button"
+                    android:entries="@array/power_doubletap"
+                    android:entryValues="@array/power_doubletap_values"
+                    android:key="power_doubletap_button"
+                    android:title="DoubleTap Assignment" />
+                <com.wubydax.romcontrol.prefs.IntentDialogPreference
+                    includeSearch="true"
+                    setSeparatorString="\##"
+                    android:key="power_custom_app"
+                    android:summary="None"
+                    android:title="DoubleTap Application" />
+            </PreferenceScreen>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:summary=""
+        android:title="Statusbar Vitual Key Customization">
+        <PreferenceScreen
+            android:summary="Customize Left | Center | Right Buttons"
+            android:title="Map Statusbar Virtual buttons">
+            <PreferenceCategory android:title="Customize Button Behaviors" />
+            <PreferenceScreen
+                android:key="status_bar_virtual_key_right"
+                android:title="Virtual Key Function">
+                <SwitchPreference
+                    android:defaultValue="false"
+                    android:key="cocoyaya_leftcornertask"
+                    android:summaryOff="Off"
+                    android:summaryOn="On"
+                    android:title="leftcornertask" />
+                <SwitchPreference
+                    android:defaultValue="false"
+                    android:key="cocoyaya_leftcornerhome"
+                    android:summaryOff="Off"
+                    android:summaryOn="On"
+                    android:title="leftcornerhome" />
+                <SwitchPreference
+                    android:defaultValue="false"
+                    android:key="cocoyaya_centertask"
+                    android:summaryOff="Off"
+                    android:summaryOn="On"
+                    android:title="centertask" />
+                <SwitchPreference
+                    android:defaultValue="false"
+                    android:key="cocoyaya_centerhome"
+                    android:summaryOff="Off"
+                    android:summaryOn="On"
+                    android:title="centerhome" />
+                <SwitchPreference
+                    android:defaultValue="false"
+                    android:key="cocoyaya_rightcornerlock"
+                    android:summaryOff="Off"
+                    android:summaryOn="On"
+                    android:title="rightcornerlock" />
+            </PreferenceScreen>
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

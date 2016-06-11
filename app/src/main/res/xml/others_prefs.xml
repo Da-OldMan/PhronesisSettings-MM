@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:summary="Scrolling animations"
+        android:title="Mokee Listview Animations">
+        <com.wubydax.romcontrol.prefs.MyListPreference
+            android:dependency="listview_animation"
+            android:entries="@array/listview_animation_entries"
+            android:entryValues="@array/listview_animation_values"
+            android:key="listview_animation"
+            android:title="Listview animation" />
+        <com.wubydax.romcontrol.prefs.MyListPreference
+            android:dependency="listview_interpolator"
+            android:entries="@array/listview_interpolator_entries"
+            android:entryValues="@array/listview_interpolator_values"
+            android:key="listview_interpolator"
+            android:title="Listview interpolator" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Display">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="all_rotations"
+            android:summaryOff="All rotations disabled"
+            android:summaryOn="Currently enabled"
+            android:title="Allow 360 Rotation [Soft reboot to apply]" />
+        <SwitchPreference
+            android:key="phronesis_usb_plugged"
+            android:summaryOff="Off"
+            android:summaryOn="On"
+            android:title="USB Plug / Unplug Wake Screen" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Device Settings and Data Backup" />
+    <PreferenceScreen
+        android:key="script#backup.sql"
+        android:summary=""
+        android:title="Backup System Settings" />
+    <PreferenceScreen
+        android:key="script#wifibackup.sql"
+        android:summary=""
+        android:title="Backup Wifi configurations" />
+    <PreferenceScreen
+        android:key="script#backupinput1.sql"
+        android:summary=""
+        android:title="Backup Keyboard data and settings" />
+    <PreferenceScreen
+        android:key="script#mmssmsbk.sql"
+        android:summary=""
+        android:title="Backup SMS and MMS" />
+    <PreferenceScreen
+        android:key="script#contactbk.sql"
+        android:summary=""
+        android:title="Backup Contacts" />
+    <PreferenceScreen
+        android:key="script#calllogbk.sql"
+        android:summary=""
+        android:title="Backup Call logs" />
+    <PreferenceScreen
+        android:key="script#calendarbk.sql"
+        android:summary=""
+        android:title="Backup Calendar entries" />
+    <PreferenceCategory android:title="" />
+    <PreferenceCategory android:title="Device Settings and Data Restore" />
+    <PreferenceScreen
+        android:key="script#restore.sql"
+        android:summary="Device will auto reboot to apply settings"
+        android:title="Restore System Settings" />
+    <PreferenceScreen
+        android:key="script#wifirestore1.sql"
+        android:summary="Device will auto reboot to apply settings"
+        android:title="Restore Wifi configurations" />
+    <PreferenceScreen
+        android:key="script#restoreinput.sql"
+        android:summary="Device will auto reboot to apply settings"
+        android:title="Restore Keyboard data" />
+    <PreferenceScreen
+        android:key="script#mmssmsrestore.sql"
+        android:summary=""
+        android:title="Restore SMS and MMS" />
+    <PreferenceScreen
+        android:key="script#contactrestore.sql"
+        android:summary=""
+        android:title="Restore Contacts" />
+    <PreferenceScreen
+        android:key="script#calllogrestore.sql"
+        android:summary=""
+        android:title="Restore Call logs" />
+    <PreferenceScreen
+        android:key="script#calendarrestore.sql"
+        android:summary=""
+        android:title="Restore Calendar entries" />
+    <PreferenceCategory android:title="Soft Reboot Device">
+        <PreferenceScreen
+            android:icon="@drawable/powerlogo"
+            android:key="script#softreboot"
+            android:summary=""
+            android:title="Touch to soft reboot" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="About" />
+    <PreferenceScreen
+        android:summary="Click to visit the Rom thread"
+        android:title="Phronesis Rom Control">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://forum.xda-developers.com/galaxy-note-3/development/rom-phronesis-rom-v1-0-stable-feature-t3241910" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:summary="The ROM Dev's"
+        android:title="Oluwaponmile and The know-how team">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://forum.xda-developers.com/member.php?u=744557" />
+    </PreferenceScreen>
+    <PreferenceCategory android:title="Special Thanks to..." />
+    <PreferenceScreen
+        android:summary="You're just amazing mate"
+        android:title="DaOldMan">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://forum.xda-developers.com/member.php?u=4819130" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:summary=" You will surely want to have him as your right-hand man."
+        android:title="filchi756">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://forum.xda-developers.com/member.php?u=3002844" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:summary="The ROM Control app builder"
+        android:title="civato">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://forum.xda-developers.com/member.php?u=3986004" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:summary="Source code ROM Control Developer"
+        android:title="daxgirl">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://forum.xda-developers.com/member.php?u=4714483" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:summary="Thanks for your help always"
+        android:title="Logel">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://forum.xda-developers.com/member.php?u=3901205" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:summary=" You're a perfect gentleman"
+        android:title="kmokhtar79">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://forum.xda-developers.com/member.php?u=4819130" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:summary="You're just amazing mate......always on the phone and telegram to offer suggestion and assistance."
+        android:title="tdunham">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://forum.xda-developers.com/member.php?u=3026895" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:summary="Thanks for giving us permission to use your base"
+        android:title="darkera13">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://forum.xda-developers.com/member.php?u=4696762" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:summary="What a blessing you've been to us."
+        android:title="silitek">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://forum.xda-developers.com/member.php?u=1787323" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:summary="Credit to the team for their support"
+        android:title="Aurora Team">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://www.google.co.uk/" />
+    </PreferenceScreen>
+</PreferenceScreen>

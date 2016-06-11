@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Google Apps Toggle">
+        <PreferenceScreen
+            android:key="script#googleoff"
+            android:summary="Remove Google applications"
+            android:title="Disable Google Apps" />
+        <PreferenceScreen
+            android:key="script#googleon"
+            android:summary="Install Google applications"
+            android:title="Enable Google Apps" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Netflix Control">
+        <PreferenceScreen
+            android:key="script#enbnetlib"
+            android:summary="Enable Netflix - device will auto-reboot"
+            android:title="Netflix ON" />
+        <PreferenceScreen
+            android:key="script#disnetlib"
+            android:summary="Disable Netflix - device will auto-reboot"
+            android:title="Netflix OFF" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Change Device DPI (Applications might not scale correctly outside 420 and 480 DPIs). Auto Hot Reboot">
+        <PreferenceScreen
+            android:key="script#dpi300"
+            android:summary=""
+            android:title="300 DPI" />
+        <PreferenceScreen
+            android:key="script#dpi360"
+            android:summary=""
+            android:title="360 DPI" />
+        <PreferenceScreen
+            android:key="script#dpi390"
+            android:summary=""
+            android:title="390 DPI" />
+        <PreferenceScreen
+            android:key="script#dpi420"
+            android:summary=""
+            android:title="420 DPI" />
+        <PreferenceScreen
+            android:key="script#dpi450"
+            android:summary=""
+            android:title="450 DPI" />
+        <PreferenceScreen
+            android:key="script#dpi480"
+            android:summary=""
+            android:title="480 DPI" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="SystemUI Preference (Complete Weather setup before selecting Extended Weather UI). Auto Hot Reboot" />
+    <PreferenceScreen
+        android:key="script#mmround"
+        android:summary=""
+        android:title="Round Corner SystemUI" />
+    <PreferenceScreen
+        android:key="script#mmsquare"
+        android:summary=""
+        android:title="Square MM Themed SystemUI" />
+    <PreferenceScreen
+        android:key="script#pstock"
+        android:summary="Not a single mod"
+        android:title="Pure Stock SystemUI" />
+    <PreferenceCategory android:title="---------------------------------------------------------------" />
+    <PreferenceCategory android:title="Frameworks Preference (Auto Hot Reboot)" />
+    <PreferenceScreen
+        android:key="script#moddedframe"
+        android:summary=""
+        android:title="Round corner frame panel" />
+    <PreferenceScreen
+        android:key="script#stockframe"
+        android:summary=""
+        android:title="Stock frames" />
+    <PreferenceCategory android:title="---------------------------------------------------------------" />
+    <PreferenceCategory android:title="Power Menu Preference (Auto Hot Reboot)" />
+    <PreferenceScreen
+        android:key="script#moddedframe"
+        android:summary=""
+        android:title="Stock Power Menu" />
+    <PreferenceScreen
+        android:key="script#stockframe"
+        android:summary=""
+        android:title="Advanced Power Menu" />
+    <PreferenceCategory android:title="---------------------------------------------------------------" />
+    <PreferenceCategory android:title="Boot Sound" />
+    <PreferenceScreen
+        android:key="script#disbtsnds"
+        android:title="Disable Boot Sound" />
+    <PreferenceScreen
+        android:key="script#enbtsnds"
+        android:title="Enable Boot Sound" />
+    <PreferenceCategory android:title="Volume slider Sound" />
+    <PreferenceScreen
+        android:key="script#disvolsnds"
+        android:title="Disable Volume Slider Sound" />
+    <PreferenceScreen
+        android:key="script#envolsnds"
+        android:title="Enable Volume Slider Sound" />
+    <PreferenceCategory android:title="Battery Sound" />
+    <PreferenceScreen
+        android:key="script#dislowbatsnd"
+        android:title="Disable Low Battery Sound" />
+    <PreferenceScreen
+        android:key="script#enlowbatsnd"
+        android:title="Enable Low Battery Sound" />
+</PreferenceScreen>

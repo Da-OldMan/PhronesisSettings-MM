@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Lockscreen settings" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="lockscreen_rotate"
+        android:summaryOff="Off"
+        android:summaryOn="On"
+        android:title="Lockscreen Rotation" />
+    <PreferenceCategory android:title="Lockscreen Notifications" />
+    <com.wubydax.romcontrol.prefs.MyListPreference
+        android:defaultValue="2"
+        android:entries="@array/lockscreen_notif_entries"
+        android:entryValues="@array/lockscreen_notif_values"
+        android:key="lockscreen_notifications"
+        android:summary="Number shown on lockscreen"
+        android:title="Notifications Shown on Lockscreen" />
+    <PreferenceCategory android:title="Lockscreen Mods" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="use_lockscreen_clock_font_style"
+        android:summaryOff="Disabled"
+        android:summaryOn="Custom font enabled"
+        android:title="Clock Custom Font Style" />
+    <com.wubydax.romcontrol.prefs.MyListPreference
+        android:dependency="use_lockscreen_clock_font_style"
+        android:entries="@array/lockscreen_font_style_entries"
+        android:entryValues="@array/lockscreen_font_style_values"
+        android:key="lockscreen_clock_font_style"
+        android:title="Lockscreen Clock Font Style" />
+    <PreferenceCategory android:title="Lockscreen Colors" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="kg_clock_global_toggle"
+        android:summaryOff="Disabled"
+        android:summaryOn="Enabled"
+        android:title="Clock Global Color" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-1"
+        android:dependency="kg_clock_global_toggle"
+        android:key="kg_clock_global_color"
+        android:summary="Set single color"
+        android:title="Lockscreen Clock Global Color" />
+    <PreferenceCategory android:title="Individual Clock Colors" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="false"
+        android:defaultValue="\#ffffffff"
+        android:key="kg_clock_hours_color"
+        android:summary="Choose a color"
+        android:title="Text Color hours" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="false"
+        android:defaultValue="\#ffffffff"
+        android:key="kg_clock_minutes_color"
+        android:summary="Choose a color"
+        android:title="Text Color minutes" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="false"
+        android:defaultValue="\#ffffffff"
+        android:key="kg_clock_second_color"
+        android:summary="Choose a color"
+        android:title="Text Color seconds Hours" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="false"
+        android:defaultValue="\#ffffffff"
+        android:key="kg_date_color"
+        android:summary="Choose a color"
+        android:title="The color of the date text" />
+    <SwitchPreference
+        android:defaultValue="0"
+        android:key="lock_seconds"
+        android:summaryOff="Hide"
+        android:summaryOn="Show"
+        android:title="Show seconds in hours" />
+    <PreferenceCategory android:title="Next Alarm Toggles" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="next_alarm"
+        android:summaryOff="Show"
+        android:summaryOn="Hide"
+        android:title="Next Alarm" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-1"
+        android:key="next_alarm_color"
+        android:summary="Choose next alarm color"
+        android:title="Next Alarm Text Color" />
+    <PreferenceCategory
+        android:summary="Customize what displays on lockscreen"
+        android:title="Carrier Text Mods" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="custom_lock_carrier"
+        android:summaryOff="Disabled"
+        android:summaryOn="Enabled"
+        android:title="Use Custom Carrier Text" />
+    <com.wubydax.romcontrol.prefs.MyEditTextPreference
+        android:defaultValue=""
+        android:dependency="custom_lock_carrier"
+        android:dialogTitle="Set Custom Text"
+        android:key="custom_lock_carrier_text"
+        android:summary="Edit carrier label"
+        android:title="Carrier Custom Text" />
+    <com.wubydax.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        android:defaultValue="-1"
+        android:key="carrier_color"
+        android:summary="Choose carrier color"
+        android:title="Carrier Text" />
+</PreferenceScreen>

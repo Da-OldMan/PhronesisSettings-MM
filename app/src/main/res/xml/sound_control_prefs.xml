@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen
+        android:layout_width="fill_parent"
+        android:layout_height="200.0dip"
+        android:layout="@layout/soundpanel_logo" />
+    <PreferenceScreen
+        android:icon="@drawable/smusic"
+        android:summary=""
+        android:title="Samsung Music Player">
+        <intent
+            android:action="android.intent.category.DEFAULT"
+            android:targetClass="com.sec.android.app.music.common.activity.MusicMainActivity"
+            android:targetPackage="com.sec.android.app.music" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/beat"
+        android:summary=""
+        android:title="Beats Audio">
+        <intent
+            android:action="android.intent.category.DEFAULT"
+            android:targetClass="com.zloban.beatsfx.beatsAudioControlPanelActivity"
+            android:targetPackage="com.zloban.beatsfx" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/viper"
+        android:summary=""
+        android:title="Viper4Android">
+        <intent
+            android:action="android.intent.category.DEFAULT"
+            android:targetClass="com.vipercn.viper4android_v2.activity.ViPER4Android"
+            android:targetPackage="com.vipercn.viper4android_v2" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/dolby"
+        android:summary=""
+        android:title="Dolby Atmos">
+        <intent
+            android:action="android.intent.category.DEFAULT"
+            android:targetClass="com.atmos.daxappUI.MainActivity"
+            android:targetPackage="com.atmos.daxappUI" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/salive"
+        android:summary=""
+        android:title="Samsung Soundalive">
+        <intent
+            android:action="android.intent.category.DEFAULT"
+            android:targetClass="com.sec.android.app.soundalive.SAControlPanelActivity"
+            android:targetPackage="com.sec.android.app.soundalive" />
+    </PreferenceScreen>
+    <PreferenceCategory android:title="Screen Off Music Control" />
+    <PreferenceScreen
+        android:icon="@drawable/music_control"
+        android:summary="@string/volbtn_music_controls_summary"
+        android:title="@string/volbtn_music_controls_title">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="volbtn_music_controls"
+            android:title="@string/volbtn_toggle_title" />
+        <com.wubydax.romcontrol.prefs.MyListPreference
+            android:defaultValue="400"
+            android:dependency="volbtn_music_controls"
+            android:entries="@array/volbtn_timeout_entries"
+            android:entryValues="@array/volbtn_timeout_values"
+            android:key="volbtn_timeout"
+            android:title="@string/volbtn_timeout_title" />
+        <com.wubydax.romcontrol.prefs.MyListPreference
+            android:defaultValue="87"
+            android:dependency="volbtn_music_controls"
+            android:entries="@array/volbtn_action_entries"
+            android:entryValues="@array/volbtn_action_values"
+            android:key="volbtn_vol_up"
+            android:title="@string/volbtn_vol_up_title" />
+        <com.wubydax.romcontrol.prefs.MyListPreference
+            android:defaultValue="88"
+            android:dependency="volbtn_music_controls"
+            android:entries="@array/volbtn_action_entries"
+            android:entryValues="@array/volbtn_action_values"
+            android:key="volbtn_vol_down"
+            android:title="@string/volbtn_vol_down_title" />
+    </PreferenceScreen>
+</PreferenceScreen>

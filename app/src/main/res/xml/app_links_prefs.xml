@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen
+        android:icon="@drawable/ic_launcher_settings"
+        android:key="com.android.settings.Settings"
+        android:summary="Open device settings"
+        android:title="Open Settings" />
+    <PreferenceScreen
+        android:icon="@drawable/ic_launcher_supersu"
+        android:key="eu.chainfire.supersu.MainActivity"
+        android:summary="Control Root access"
+        android:title="SuperSu" />
+    <PreferenceScreen
+        android:icon="@drawable/ic_setting_toolbox"
+        android:summary="Launch and add apps to toolbox"
+        android:title="Toolbox Control">
+        <intent
+            android:targetClass="com.wubydax.toolboxsettings.ToolboxSettings"
+            android:targetPackage="com.wubydax.toolboxsettings" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/ic_setting_upsm"
+        android:key="mobi.xperiacle.upsm.manager.MainActivity"
+        android:summary="Enable apps on UPSM and Emergency mode"
+        android:title="UPSM Manager" />
+    <PreferenceScreen
+        android:icon="@drawable/ic_launcher_adaway"
+        android:summary="Block Advertisements"
+        android:title="AdAway">
+        <intent
+            android:targetClass="org.adaway.ui.BaseActivity"
+            android:targetPackage="org.adaway" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/ic_launcher_termemu"
+        android:key="jackpal.androidterm.Term"
+        android:summary="Terminal Emulator for advanced users"
+        android:title="Terminal Emulator" />
+</PreferenceScreen>

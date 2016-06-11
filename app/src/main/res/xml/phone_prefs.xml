@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Advanced Phone settings" />
+    <PreferenceScreen
+        android:summary="System enhancement options"
+        android:title="Enhanced Settings">
+        <PreferenceCategory android:title="Enhanced Settings" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="phronesis_capture_screen_sound"
+            android:summary="Make a sound when taking a Screenshot"
+            android:summaryOff="Screenshot Sound Disabled"
+            android:summaryOn="Screenshot Sound Enabled"
+            android:title="Screenshot Sound" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="torchlight_enable"
+            android:summary="When the screen is locked Press the volume button to turn on or switch off the flashlight"
+            android:summaryOff="Lock screen flashlight disabled"
+            android:summaryOn="Lock screen flashlight enabled"
+            android:title="Lock screen flashlight" />
+        <com.wubydax.romcontrol.prefs.MyListPreference
+            android:defaultValue="30000"
+            android:dependency="torchlight_enable"
+            android:entries="@array/LockScreenTorchTimeoutName"
+            android:entryValues="@array/LockScreenTorchTimeoutValue"
+            android:key="torchlight_timeout"
+            android:summary="Flashlight auto-off time set"
+            android:title="Lock screen flashlight timeout" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="killprocess_quick_unlock"
+            android:summary="Unlock device without the need to press on the OK button after inputting your PIN"
+            android:summaryOff="Quick Unlock disabled"
+            android:summaryOn="Quick Unlock enabled"
+            android:title="Quick unlock PIN lock screen" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="email_security"
+            android:summaryOff="Security is Enabled"
+            android:summaryOn="Security is Disabled "
+            android:title="Samsung Email Exchange Security Policy Mod" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:summary="Advanced telephony features. Call recording and other settings"
+        android:title="Advanced Call Settings">
+        <PreferenceCategory android:title="Advanced Call Settings">
+            <SwitchPreference
+                android:key="killprocess_show_dialpad_locator"
+                android:summary="Show dialpad as default on phone menu"
+                android:summaryOff="Dialpad display disabled"
+                android:summaryOn="Dialpad display enabled"
+                android:title="Dialpad attribution" />
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="auto_call_record_in"
+                android:summaryOff="Disabled"
+                android:summaryOn="Enabled"
+                android:title="Incoming auto call record" />
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="auto_call_record_out"
+                android:summaryOff="Disabled"
+                android:summaryOn="Enabled"
+                android:title="Outgoing auto call record" />
+            <com.wubydax.romcontrol.prefs.MyListPreference
+                android:defaultValue="10000"
+                android:entries="@array/CallDelayName"
+                android:entryValues="@array/CallDelayValue"
+                android:key="killprocess_call_delay"
+                android:summary="Call screen return delay (in seconds)"
+                android:title="Call screen return time duration" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="Caller LED flashlight setting">
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="aurora_incoming_call_normal_flashlight"
+                android:summary="Ringing mode calls flashlight"
+                android:title="Ringing mode calls flashlight" />
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="aurora_incoming_call_silent_flashlight"
+                android:summary="Silent mode calls flashlight"
+                android:title="Silent mode calls flashlight" />
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="aurora_incoming_call_vibrate_flashlight"
+                android:summary="Vibration mode calls flashlight"
+                android:title="Vibration mode flashlight" />
+            <com.wubydax.romcontrol.prefs.MyListPreference
+                android:defaultValue="1000"
+                android:entries="@array/incoming_call_flashlight_freqentries"
+                android:entryValues="@array/incoming_call_flashlight_freqvalues"
+                android:key="aurora_incoming_call_flashlight_freq"
+                android:summary=""
+                android:title="Caller flash frequency settings" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:summary="Usb Setup. Hardware Test, IMEI"
+        android:title="Advanced Function Menu">
+        <PreferenceCategory android:title="Advanced Function Menu" />
+        <PreferenceScreen
+            android:summary="Testing menu and device information"
+            android:title="Phone Testing Menu">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.android.settings.TestingSettings"
+                android:targetPackage="com.android.settings" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:summary="Allows changing advanced Usb mode settings"
+            android:title="Phone USB Mode setting">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.sec.usbsettings.USBSettings"
+                android:targetPackage="com.sec.usbsettings" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:summary="Modify phone access points"
+            android:title="Phone APN Set up">
+            <intent
+                android:action="android.settings.APN_SETTINGS"
+                android:targetPackage="com.android.settings" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:summary="All the battery information is here"
+            android:title="Battery Status">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.sec.android.app.status.BatteryStatus"
+                android:targetPackage="com.sec.android.app.factorykeystring" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:summary="Here you can test all detected hardware"
+            android:title="Hardware test">
+            <intent
+                android:action="android.provider.Telephony.SECRET_CODE"
+                android:targetClass="com.sec.android.app.hwmoduletest.HwModuleTest"
+                android:targetPackage="com.sec.android.app.hwmoduletest" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:summary="ViewIMEI/MEID"
+            android:title="IMEI/MEID">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.sec.android.app.modemui.activities.ShowIMEI"
+                android:targetPackage="com.sec.android.app.servicemodeapp" />
+        </PreferenceScreen>
+    </PreferenceScreen>
+</PreferenceScreen>
